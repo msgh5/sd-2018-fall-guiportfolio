@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="15.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
-  <Import Project="..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.0\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props" Condition="Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.0\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" />
+  <Import Project="..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props" Condition="Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" />
   <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
@@ -45,6 +45,9 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="Microsoft.CodeDom.Providers.DotNetCompilerPlatform, Version=2.0.1.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\lib\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll</HintPath>
+    </Reference>
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="System" />
     <Reference Include="System.Data" />
@@ -139,9 +142,6 @@
     <Reference Include="Microsoft.AI.Web">
       <HintPath>..\packages\Microsoft.ApplicationInsights.Web.2.5.1\lib\net45\Microsoft.AI.Web.dll</HintPath>
     </Reference>
-    <Reference Include="Microsoft.CodeDom.Providers.DotNetCompilerPlatform">
-      <HintPath>..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.0\lib\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll</HintPath>
-    </Reference>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="App_Start\BundleConfig.cs" />
@@ -160,15 +160,100 @@
     <Content Include="Content\bootstrap-theme.min.css" />
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
+    <Content Include="css\animate.css" />
+    <Content Include="css\bootstrap.min.css" />
+    <Content Include="css\ionicons.min.css" />
+    <Content Include="css\jquery.fancybox.css" />
+    <Content Include="css\main.css" />
+    <Content Include="css\owl.carousel.css" />
+    <Content Include="css\owl.theme.css" />
+    <Content Include="css\responsive.css" />
+    <Content Include="css\slider.css" />
+    <Content Include="css\style.css" />
     <Content Include="favicon.ico" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
+    <Content Include="fonts\ionicons.svg" />
     <Content Include="Global.asax" />
     <Content Include="Content\Site.css" />
+    <Content Include="images\about\about-company.jpg" />
+    <Content Include="images\about\about.jpg" />
+    <Content Include="images\author\about.jpg" />
+    <Content Include="images\author\author-bg.jpg" />
+    <Content Include="images\author\author.jpg" />
+    <Content Include="images\avater-1.jpg" />
+    <Content Include="images\avater-2.jpg" />
+    <Content Include="images\avater.jpg" />
+    <Content Include="images\blog\post-1.jpg" />
+    <Content Include="images\blog\post-2.jpg" />
+    <Content Include="images\blog\post-3.jpg" />
+    <Content Include="images\clients\logo-1.jpg" />
+    <Content Include="images\clients\logo-2.jpg" />
+    <Content Include="images\clients\logo-3.jpg" />
+    <Content Include="images\clients\logo-4.jpg" />
+    <Content Include="images\clients\logo-5.jpg" />
+    <Content Include="images\icons\close.png" />
+    <Content Include="images\icons\i_next.png" />
+    <Content Include="images\icons\i_prev.png" />
+    <Content Include="images\icons\left.png" />
+    <Content Include="images\icons\map-marker.png" />
+    <Content Include="images\icons\next.png" />
+    <Content Include="images\icons\prev.png" />
+    <Content Include="images\icons\quotes.png" />
+    <Content Include="images\icons\right.png" />
+    <Content Include="images\logo.png" />
+    <Content Include="images\portfolio\item-1.jpg" />
+    <Content Include="images\portfolio\item-2.jpg" />
+    <Content Include="images\portfolio\item-3.jpg" />
+    <Content Include="images\portfolio\item-4.jpg" />
+    <Content Include="images\portfolio\item-5.jpg" />
+    <Content Include="images\portfolio\item-6.jpg" />
+    <Content Include="images\portfolio\post-1.jpg" />
+    <Content Include="images\slider.jpg" />
+    <Content Include="images\team.jpg" />
+    <Content Include="images\team\team-1.jpg" />
+    <Content Include="images\team\team-2.jpg" />
+    <Content Include="images\team\team-3.jpg" />
+    <Content Include="images\team\team-4.jpg" />
+    <Content Include="js\bootstrap.min.js" />
+    <Content Include="js\jquery.fancybox.js" />
+    <Content Include="js\jquery.min.js" />
+    <Content Include="js\main.js" />
+    <Content Include="js\owl.carousel.min.js" />
+    <Content Include="js\slider.js" />
+    <Content Include="js\vendor\modernizr-2.6.2.min.js" />
+    <Content Include="js\wow.min.js" />
+    <Content Include="plugins\animate-css\animate.css" />
+    <Content Include="plugins\bootstrap\bootstrap.min.css" />
+    <Content Include="plugins\bootstrap\bootstrap.min.js" />
+    <Content Include="plugins\facncybox\jquery.fancybox.css" />
+    <Content Include="plugins\facncybox\jquery.fancybox.js" />
+    <Content Include="plugins\form-validation\jquery.form.js" />
+    <Content Include="plugins\form-validation\jquery.validate.min.js" />
+    <Content Include="plugins\ionicons\fonts\ionicons.svg" />
+    <Content Include="plugins\ionicons\ionicons.min.css" />
+    <Content Include="plugins\jQurey\jquery.min.js" />
+    <Content Include="plugins\modernizr\modernizr-2.6.2.min.js" />
+    <Content Include="plugins\owl-carousel\owl.carousel.css" />
+    <Content Include="plugins\owl-carousel\owl.carousel.min.js" />
+    <Content Include="plugins\owl-carousel\owl.theme.css" />
+    <Content Include="plugins\slider.css" />
+    <Content Include="plugins\slider\slider.css" />
+    <Content Include="plugins\slider\slider.js" />
+    <Content Include="plugins\wow-js\wow.min.js" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
     <Content Include="ApplicationInsights.config">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
+    <Content Include="css\maps\style.css.map" />
+    <Content Include="fonts\ionicons.eot" />
+    <Content Include="fonts\ionicons.ttf" />
+    <Content Include="fonts\ionicons.woff" />
+    <Content Include="less\main.less" />
+    <Content Include="less\responsive.less" />
+    <Content Include="plugins\ionicons\fonts\ionicons.eot" />
+    <Content Include="plugins\ionicons\fonts\ionicons.ttf" />
+    <Content Include="plugins\ionicons\fonts\ionicons.woff" />
     <None Include="Scripts\jquery-3.3.1.intellisense.js" />
     <Content Include="Scripts\jquery-3.3.1.js" />
     <Content Include="Scripts\jquery-3.3.1.min.js" />
@@ -248,7 +333,7 @@
     <PropertyGroup>
       <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
     </PropertyGroup>
-    <Error Condition="!Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.0\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.0\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props'))" />
+    <Error Condition="!Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props'))" />
   </Target>
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it.
        Other similar extension points exist, see Microsoft.Common.targets.
