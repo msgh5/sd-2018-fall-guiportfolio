@@ -2,6 +2,30 @@
     ViewBag.Title = "Home Page";
 }
 
+@section scripts {
+    <script type="text/javascript" src="~/Scripts/SyntaxHighlighter/shCore.js"></script>
+    <script type="text/javascript" src="~/Scripts/SyntaxHighlighter/shBrushJScript.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function () {
+            SyntaxHighlighter.all();
+
+            $("#btn-ex1-code").click(function () {
+                $("#ex1-code").toggle();
+
+                if ($(this).text() == "Show Code") {
+                    $(this).text("Hide Code");
+                } else {
+                    $(this).text("Show Code");
+                }
+            });
+        })
+    </script>
+}
+@section styles{
+    <link rel="stylesheet" href="~/Content/SyntaxHighlighter/shCore.css">
+    <link rel="stylesheet" href="~/Content/SyntaxHighlighter/shCoreDefault.css">
+}
+
 <!--
 ==================================================
 Slider Section Start
@@ -14,11 +38,11 @@ Slider Section Start
                     <!-- Slider -->
                     <section class="cd-intro">
                         <h1 class="wow fadeInUp animated cd-headline slide" data-wow-delay=".4s">
-                            <span>HI, MY NAME IS JONATHON & I AM A</span><br>
+                            <span>HI, MY NAME IS GUI & I AM A</span><br>
                             <span class="cd-words-wrapper">
-                                <b class="is-visible">DESIGNER</b>
+                                <b class="is-visible">INSTRUCTOR</b>
                                 <b>DEVELOPER</b>
-                                <b>FATHER</b>
+                                <b>GAMER (or used to be)</b>
                             </span>
                         </h1>
                     </section> <!-- cd-intro -->
@@ -46,142 +70,28 @@ Portfolio Section Start
         </div>
         <div class="row">
             <div class="col-sm-4 col-xs-12">
-                <figure class="wow fadeInLeft animated portfolio-item" data-wow-duration="500ms" data-wow-delay="0ms">
-                    <div class="img-wrapper">
-                        <img src="~/Content/images/portfolio/item-1.jpg" class="img-responsive" alt="this is a title">
-                        <div class="overlay">
-                            <div class="buttons">
-                                <a rel="gallery" class="fancybox" href="images/portfolio/item-1.jpg">Demo</a>
-                                <a target="_blank" href="single-portfolio.html">Details</a>
+                <!-- Modal -->
+
+                <a href="" data-toggle="modal" data-target="#myJsExercisesModal">
+                    <figure class="wow fadeInLeft animated portfolio-item" data-wow-duration="500ms" data-wow-delay="0ms">
+                        <div class="img-wrapper">
+                            <img src="~/Content/images/portfolio/item-1.jpg" class="img-responsive" alt="this is a title">
+                            <div class="overlay">
+
                             </div>
                         </div>
-                    </div>
-                    <figcaption>
-                        <h4>
-                            <a href="#">
-                                Dew Drop
-                            </a>
-                        </h4>
-                        <p>
-                            Redesigne UI Concept
-                        </p>
-                    </figcaption>
-                </figure>
-            </div>
-            <div class="col-sm-4 col-xs-12">
-                <figure class="wow fadeInLeft animated" data-wow-duration="500ms" data-wow-delay="300ms">
-                    <div class="img-wrapper">
-                        <img src="~/Content/images/portfolio/item-2.jpg" class="img-responsive" alt="this is a title">
-                        <div class="overlay">
-                            <div class="buttons">
-                                <a rel="gallery" class="fancybox" href="images/portfolio/item-2.jpg">Demo</a>
-                                <a target="_blank" href="single-portfolio.html">Details</a>
-                            </div>
-                        </div>
-                    </div>
-                    <figcaption>
-                        <h4>
-                            <a href="#">
-                                Bottle Mockup
-                            </a>
-                        </h4>
-                        <p>
-                            Lorem ipsum dolor sit.
-                        </p>
-                    </figcaption>
-                </figure>
-            </div>
-            <div class="col-sm-4 col-xs-12">
-                <figure class="wow fadeInLeft animated" data-wow-duration="500ms" data-wow-delay="300ms">
-                    <div class="img-wrapper">
-                        <img src="~/Content/images/portfolio/item-3.jpg" class="img-responsive" alt="">
-                        <div class="overlay">
-                            <div class="buttons">
-                                <a rel="gallery" class="fancybox" href="~/Content/images/portfolio/item-3.jpg">Demo</a>
-                                <a target="_blank" href="single-portfolio.html">Details</a>
-                            </div>
-                        </div>
-                    </div>
-                    <figcaption>
-                        <h4>
-                            <a href="#">
-                                Table Design
-                            </a>
-                        </h4>
-                        <p>
-                            Lorem ipsum dolor sit amet.
-                        </p>
-                    </figcaption>
-                </figure>
-            </div>
-            <div class="col-sm-4 col-xs-12">
-                <figure class="wow fadeInLeft animated" data-wow-duration="500ms" data-wow-delay="600ms">
-                    <div class="img-wrapper">
-                        <img src="~/Content/images/portfolio/item-4.jpg" class="img-responsive" alt="">
-                        <div class="overlay">
-                            <div class="buttons">
-                                <a rel="gallery" class="fancybox" href="~/Content/images/portfolio/item-4.jpg">Demo</a>
-                                <a target="_blank" href="single-portfolio.html">Details</a>
-                            </div>
-                        </div>
-                    </div>
-                    <figcaption>
-                        <h4>
-                            <a href="#">
-                                Make Up elements
-                            </a>
-                        </h4>
-                        <p>
-                            Lorem ipsum dolor.
-                        </p>
-                    </figcaption>
-                </figure>
-            </div>
-            <div class="col-sm-4 col-xs-12">
-                <figure class="wow fadeInLeft animated" data-wow-duration="500ms" data-wow-delay="900ms">
-                    <div class="img-wrapper">
-                        <img src="~/Content/images/portfolio/item-5.jpg" class="img-responsive" alt="">
-                        <div class="overlay">
-                            <div class="buttons">
-                                <a rel="gallery" class="fancybox" href="~/Content/images/portfolio/item-5.jpg">Demo</a>
-                                <a target="_blank" href="single-portfolio.html">Details</a>
-                            </div>
-                        </div>
-                    </div>
-                    <figcaption>
-                        <h4>
-                            <a href="#">
-                                Shoping Bag Concept
-                            </a>
-                        </h4>
-                        <p>
-                            Lorem ipsum dolor.
-                        </p>
-                    </figcaption>
-                </figure>
-            </div>
-            <div class="col-sm-4 col-xs-12">
-                <figure class="wow fadeInLeft animated" data-wow-duration="500ms" data-wow-delay="1200ms">
-                    <div class="img-wrapper">
-                        <img src="~/Content/images/portfolio/item-6.jpg" class="img-responsive" alt="">
-                        <div class="overlay">
-                            <div class="buttons">
-                                <a rel="gallery" class="fancybox" href="~/Content/images/portfolio/item-6.jpg">Demo</a>
-                                <a target="_blank" href="single-portfolio.html">Details</a>
-                            </div>
-                        </div>
-                    </div>
-                    <figcaption>
-                        <h4>
-                            <a href="#">
-                                Caramel Bottle
-                            </a>
-                        </h4>
-                        <p>
-                            Lorem ipsum dolor.
-                        </p>
-                    </figcaption>
-                </figure>
+                        <figcaption>
+                            <h4>
+                                <a href="#">
+                                    JavaScript Exercises
+                                </a>
+                            </h4>
+                            <p>
+                                JavaScript Exercises with JQuery
+                            </p>
+                        </figcaption>
+                    </figure>
+                </a>
             </div>
         </div>
     </div>
@@ -189,7 +99,8 @@ Portfolio Section Start
 <!--
 ==================================================
 Portfolio Section Start
-================================================== -->
+==================================================
+-->
 <section id="feature">
     <div class="container">
         <div class="section-heading">
@@ -280,3 +191,62 @@ Portfolio Section Start
         </div>
     </div>
 </section> <!-- /#feature -->
+
+<div class="modal fade" id="myJsExercisesModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+    <div class="modal-dialog modal-lg" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                <h4 class="modal-title" id="myModalLabel">JavaScript Exercises</h4>
+            </div>
+            <div class="modal-body">
+                <ul class="nav nav-tabs">
+                    <li class="active"><a data-toggle="tab" href="#ex-1">Exercise 1</a></li>
+                    <li><a data-toggle="tab" href="#ex-2">Exercise 2</a></li>
+                    <li><a data-toggle="tab" href="#ex-3">Exercise 3</a></li>
+                    <li><a data-toggle="tab" href="#ex-4">Exercise 4</a></li>
+                </ul>
+
+                <div class="tab-content">
+                    <div id="ex-1" class="tab-pane fade in active">
+                        <div class="row">
+                            <div class="col-md-6">
+                                <h3>Exercise 1</h3>
+                            </div>
+                            <div class="col-md-6">
+                                <p>Exercise 1 Content</p>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-12">
+                                <button id="btn-ex1-code" class="btn btn-primary">Show Code</button>
+                                <div id="ex1-code" style="display:none">
+                                    <pre class="brush:js;">
+                                        $(document).ready(function() {
+                                            alert('asdasdasd');
+                                        });
+                                    </pre>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="ex-2" class="tab-pane fade">
+                        <h3>Exercise 2</h3>
+                        <p>Exercise 2 Content</p>
+                    </div>
+                    <div id="ex-3" class="tab-pane fade">
+                        <h3>Exercise 3</h3>
+                        <p>Exercise 3 Content</p>
+                    </div>
+                    <div id="ex-4" class="tab-pane fade">
+                        <h3>Exercise 4</h3>
+                        <p>Exercise 4 Content</p>
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+            </div>
+        </div>
+    </div>
+</div>
